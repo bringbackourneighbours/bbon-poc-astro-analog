@@ -1,5 +1,7 @@
 ---
-
+const number = ()=> {
+	return Math.random()*1000
+}
 ---
 
 <html lang="en">
@@ -12,5 +14,7 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+
+		{number()}
 	</body>
 </html>

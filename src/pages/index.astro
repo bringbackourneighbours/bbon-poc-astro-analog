@@ -1,7 +1,7 @@
 ---
-const number = ()=> {
-	return Math.random()*1000
-}
+import { HelloComponent } from '../components/hello.component';
+const helpText = "Variable binding";
+
 ---
 
 <html lang="en">
@@ -13,8 +13,11 @@ const number = ()=> {
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<HelloComponent />
+		<HelloComponent helpText="Template" />
+		<HelloComponent helpText={helpText} />
 
-		{number()}
+		<HelloComponent client:visible />
+		<HelloComponent client:visible helpText="client-binding"/>
 	</body>
 </html>
